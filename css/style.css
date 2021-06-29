@@ -86,6 +86,10 @@ body {
 .nav-header li{
     margin-right: 26px;
 }
+html[dir=rtl] .nav-header li {
+    margin-left: 26px;
+    margin-right: 0;
+}
 .nav-header li:last-of-type{
     margin-right: 0;
 }
@@ -189,27 +193,36 @@ body {
     margin-right: auto;
     position: relative;
 }
+html[dir=rtl] .search-box .search-bar{
+    margin-left: 0;
+    margin-right: 88%;
+}
 
 .search-bar .search-input {
     width: 100%;
     height: 45px;
     padding-left: 30px;
+    border-radius: 22px;
     font-size: 16px;
-    font-family: "regular";
+    font-family: "TajawalRegular";
     color: #000;
     outline: none;
-    border: 2px solid #dedede;
-    transition: all 0.4s ease-in-out;
+    border: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+html[dir=rtl] .search-bar .search-input{
+    padding-left: 0;
+    padding-right: 30px;
 }
 
 .search-bar .search-input::placeholder {
     font-size: 14px;
-    font-family: "regular";
-    color: #aeaeae;
+    font-family: "TajawalRegular";
+    color: #757575;
 }
 
 .search-bar .search-input:focus {
-    border: 2px solid #000;
+    border: 1px solid #292a5e;
 }
 
 .search-bar .click-search {
@@ -222,6 +235,9 @@ body {
     font-size: 16px;
     color: rgba(0, 0, 0, 1);
     transition: all 0.4s ease-in-out;
+}
+html[dir=rtl] .search-bar .click-search{
+    right: 88%;
 }
 
 .search-bar .click-search:hover {
@@ -268,6 +284,10 @@ body {
     margin-left: 10px;
     transition: all 0.3s ease-in-out;
 }
+html[dir=rtl] .top-header .add-to{
+    margin-left: 0px;
+    margin-right: 10px;
+}
 .top-header .add-to:hover{
     background-color: #dfeaf8;
     color: #292a5e;
@@ -275,6 +295,11 @@ body {
 .add-to .dropdown-content{
     top: 48px;
     left: 60%;
+    transition: all 0.3s ease-in-out;
+}
+html[dir=rtl] .add-to .dropdown-content{
+    top: 48px;
+    left: 40%;
 }
 .cat-drop{
     color: #616161;
@@ -290,6 +315,7 @@ body {
 .dropdown {
     position: relative;
     display: inline-block;
+    transition: all 0.3s ease-in-out;
   }
   
   /* Dropdown Content (Hidden by Default) */
@@ -306,6 +332,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     padding: 4px 0 8px;
+    transition: all 0.3s ease-in-out;
   }
 
   .dropdown-content::before {
@@ -355,6 +382,10 @@ body {
     font-size: 8px;
     margin-left: 4px;
     font-weight: bold;
+}
+html[dir=rtl] .lang-section .chevron-down::after{
+    margin-left: 0px;
+    margin-right: 4px;
 }
 
 .lang-section .chevron-down:hover {
@@ -479,11 +510,19 @@ body {
     left: 10%;
     text-align: left;
 }
+html[dir=rtl] .main-slider .slider-info{
+    right: 10%;
+    text-align: right;
+}
+html[dir=rtl] .main-slider .slider-h{
+    max-width: 376px;
+}
 .main-slider .slider-h{
     font-size: 48px;
     font-family: "TajawalBold";
     color: #fff;
     max-width: 485px;
+    margin-bottom: 65px;
 }
 .main-slider .slider-button{
     width: 164px;
@@ -511,9 +550,16 @@ body {
 .image-row a{
     text-decoration: none;
 }
+html[dir=rtl] .image-row .image-sub{
+    margin-right: 0px;
+    margin-left: 30px;
+}
 .image-row .image-sub{
     text-align: center;
     margin-right: 30px;
+}
+html[dir=rtl] .image-row .image-sub:last-of-type{
+    margin-left: 0;
 }
 .image-row .image-sub:last-of-type{
     margin-right: 0;
@@ -585,6 +631,10 @@ html[dir=rtl] .item {
 .item-img-box .item-img {
     transform: scale(1.05);
     transition: all 0.4s ease-in-out;
+}
+html[dir=rtl] .item-img-box .item-span{
+    right: 3%;
+    left: 0;
 }
 .item-img-box .item-span{
     font-size: 12px;
@@ -704,6 +754,9 @@ html[dir=rtl] .price-box .last-price {
     right: 10%;
     text-align: left;
 }
+html[dir=rtl] .big-image .big-info{
+    text-align: right;
+}
 .big-image .big-h{
     font-size: 48px;
     font-family: "TajawalRegular";
@@ -749,6 +802,10 @@ html[dir=rtl] .price-box .last-price {
 .features-box .features-text{
     margin-left: 15px;
 }
+html[dir=rtl] .features-box .features-text{
+    margin-left: 0;
+    margin-right: 15px;
+}
 .features-box .features-h{
     font-size: 18px;
     font-family: "TajawalBold";
@@ -785,6 +842,11 @@ html[dir=rtl] .price-box .last-price {
 .newsletter-cont {
     position: relative;
 }
+html[dir=rtl] .newsletter-input{
+    text-align: right;
+    padding-left: 0;
+    padding-right: 45px;
+}
 .newsletter-input {
     text-align: left;
     background-color: #fff;
@@ -808,6 +870,9 @@ html[dir=rtl] .price-box .last-price {
     font-family: "TajawalMedium";
     color: #757575;
 }
+html[dir=rtl] .newsletter-button{
+    right: 92%;
+}
 .newsletter-button {
     position: absolute;
     right: 15px;
@@ -826,6 +891,10 @@ html[dir=rtl] .price-box .last-price {
     color: #000;
     right: 10px;
 }
+html[dir=rtl] .newsletter-button:hover{
+    color: #000;
+    right: 94%;
+}
 .newsletter .fa-envelope{
     position: absolute;
     left: 20px;
@@ -833,6 +902,9 @@ html[dir=rtl] .price-box .last-price {
     transform: translateY(-50%);
     font-size: 17px;
     color: #757575;
+}
+html[dir=rtl] .newsletter .fa-envelope{
+    right: 20px;
 }
 .social {
     display: flex;
@@ -855,8 +927,15 @@ html[dir=rtl] .price-box .last-price {
     color: #fff;
     transition: all .3s ease-in-out;
 }
+html[dir=rtl] .social-link{
+    margin-right: 0;
+    margin-left: 6px;
+}
 .social-link:last-of-type{
     margin-right: 0;
+}
+html[dir=rtl] .social-link:last-of-type{
+    margin-left: 0;
 }
 .social-link:hover{
     background-color: #292a5e;
@@ -1023,11 +1102,19 @@ html[dir=rtl] .price-box .last-price {
         transition: .4s;
         z-index: 200;
     }
+    html[dir=rtl] .navgition{
+        left: 0;
+        right: -500px;
+    }
     .nav-head {
         display: flex;
     }
     .reset-left {
         left: 0;
+    }
+    html[dir=rtl] 
+    .reset-left {
+        right: 0;
     }
     header .contact-info{
         display: none;
@@ -1051,13 +1138,18 @@ html[dir=rtl] .price-box .last-price {
         font-size: 15px;
     }
     .nav-header .big-menu {
-            display: block;
-            margin-top: 32px;
-            flex-direction: column;
-            padding: 0;
-            text-align: left;
-            padding-left: 15px;
-            align-items: baseline;
+        display: block;
+        margin-top: 32px;
+        flex-direction: column;
+        padding: 0;
+        text-align: left;
+        padding-left: 15px;
+        align-items: baseline;      
+    }
+    html[dir=rtl] .nav-header .big-menu{
+        text-align: right;
+        padding-left: 0;
+        padding-right: 15px;
     }
     .cat-li {
         margin-bottom: 17px;
@@ -1072,6 +1164,11 @@ html[dir=rtl] .price-box .last-price {
     .nav-header .chevron-down::after {
         padding-left: 120px;
     }
+    html[dir=rtl] .nav-header .chevron-down::after {
+        padding-left: 0;
+        padding-right: 120px;
+    }
+
     .big-menu .dropdown-content {
         background-color: transparent;
         text-align: left;
@@ -1104,8 +1201,9 @@ html[dir=rtl] .price-box .last-price {
         flex-direction: column;
     }
     .newsletter .news-header{
-        width: 50%;
+        width: 100%;
         margin: 35px 0 0px;
+        text-align: center;
     }
     .newsletter .social{
         margin: 15px 0;
@@ -1118,7 +1216,7 @@ html[dir=rtl] .price-box .last-price {
         color: #757575;
         line-height: 1.867;
         font-family: "TajawalMedium";
-        width: 50%;
+        width: 100%;
         margin: auto;
     }    
     
@@ -1126,12 +1224,17 @@ html[dir=rtl] .price-box .last-price {
 
 @media (max-width: 767px){
     .main-slider .slider-info {
-        top: 0%;
+        top: 10%;
         left: 5%
+    }
+    html[dir=rtl].main-slider .slider-info {
+        left: 0%;
+        right: 5%;
     }    
     .main-slider .slider-h {
         font-size: 25px;
         max-width: 260px;
+        margin-bottom: 30px;
     }
     .main-slider .slider-button {
         width: 110px;
@@ -1147,10 +1250,7 @@ html[dir=rtl] .price-box .last-price {
         width: 124px;
         height: 35px;
         font-size: 15px;
-    }    
-    .newsletter-input{
-        width: 100%;
-    }
+    } 
 }
 @media (max-width: 420px){
       
@@ -1165,6 +1265,10 @@ html[dir=rtl] .price-box .last-price {
         width: 124px;
         height: 35px;
         font-size: 15px;
+    }
+       
+    .newsletter-input{
+        width: 100%;
     }
 
 }
@@ -1181,6 +1285,7 @@ html[dir=rtl] .price-box .last-price {
     height: 100%;
     cursor: pointer;
     z-index: 10;
-    background-color: transparent;
+    background-color: #000;
+    opacity: .4;
     display: none;
 }
