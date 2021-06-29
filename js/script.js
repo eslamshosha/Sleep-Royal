@@ -31,10 +31,11 @@ $(document).ready(function() {
            $(".navgition").removeClass("reset-left");
            $("body").removeClass("overflow");
        });
+
+	   //dropdown inside menu
 	   $('.cat-li>.dropdown.cat-anchor').click(function (e) {
 		e.preventDefault()
 		var item =  $(this).parents(".cat-li");
-		$(".cat-li>.dropdown.cat-anchor").not(item).removeClass("active");
 		$(item).toggleClass("active");
 		if ($(item).siblings().css('display') == 'none') {
 			$(item).siblings().slideDown(500);
