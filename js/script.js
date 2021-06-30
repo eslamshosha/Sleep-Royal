@@ -4,15 +4,15 @@ $(".search .search-icon").click(function() {
 	$(".search .search-icon").removeClass("open-search")
 	$(".search .search-icon").addClass("close-search")
 	$(".search-box").addClass("search-open");
-	$(".overlay-box").fadeIn(500);
+	$(".overlay-box2").fadeIn(500);
 });
 
-$(".overlay-box").click(function() {
+$(".overlay-box2").click(function() {
 	$("body").removeClass("overflow")
 	$(".search .search-icon").addClass("open-search")
 	$(".search .search-icon").removeClass("close-search")
 	$(".search-box").removeClass("search-open");
-	$(".overlay-box").fadeOut(500);
+	$(".overlay-box2").fadeOut(500);
 });
 
 $(document).ready(function() {
@@ -45,6 +45,8 @@ $(document).ready(function() {
 	//Main Slider Carousel
 	$('.main-slider .owl-carousel').owlCarousel({
 		loop: true,
+		animateOut: 'fadeOut',
+    	animateIn: 'fadeIn',
 		autoplay: true,
 		autoplayTimeout: 4000,
 		rtl: true,
@@ -139,7 +141,7 @@ $(document).ready(function() {
 	})
 
 
-		/////////test/////////////////////
+		/////////add owl carsoul to class image-row/////////////////////
 
 	if ( $(window).width() < 920 ) {
 		$(".image-row").addClass("owl-carousel");
@@ -152,7 +154,7 @@ $(document).ready(function() {
 			responsiveClass: true,
 			responsive: {
 				0: {
-					items: 1,
+					items: 2,
 					nav: false,
 					dots: true,
 					loop: true
@@ -173,9 +175,48 @@ $(document).ready(function() {
 		});		
 	} else {
 		$(".image-row").removeClass("owl-Carousel");
-
 	}
 
+      ////////////////add owl carsoul to class feature////////////////////////////////
+
+	  if ( $(window).width() < 920 ) {
+		$(".features .row").addClass("owl-carousel");
+		$('.features .owl-carousel').owlCarousel({
+			loop: true,
+			autoplay: true,
+			autoplayTimeout: 4000,
+			margin: 10,
+			rtl: true,
+			responsiveClass: true,
+			responsive: {
+				0: {
+					items: 1,
+					nav: false,
+					dots: true,
+					loop: true
+				},
+				480: {
+					items: 1,
+					nav: false,
+					dots: true,
+					loop: true
+				},
+				720: {
+					items: 1,
+					nav: false,
+					dots: true,
+					loop: true
+				}
+			}
+		});		
+	} else {
+		$(".features .row").removeClass("owl-Carousel");
+	}
+
+	////////// remove row and col class from div//////////////////
+	if ( $(window).width() < 1199 ) {
+	$('.features .col-md-3.col-xs-12').contents().unwrap();
+	}
 
 });
 
