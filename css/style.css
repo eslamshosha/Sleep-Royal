@@ -1201,6 +1201,7 @@ html[dir=rtl] .social-link:last-of-type{
         margin-bottom: 10px;
         font-size: 14px;
         font-family: "TajawalMedium";
+        color: #929292;
     }
     .navgition .dropdown-content{
         display: none;
@@ -1302,6 +1303,9 @@ html[dir=rtl] .social-link:last-of-type{
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+    .nav-header .chevron-down::after{
+        margin: 0;
     }
 
     .big-menu .dropdown-content {
