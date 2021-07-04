@@ -86,10 +86,6 @@ body {
 .nav-header li{
     margin-right: 26px;
 }
-html[dir=rtl] .nav-header li {
-    margin-left: 26px;
-    margin-right: 0;
-}
 .nav-header li:last-of-type{
     margin-right: 0;
 }
@@ -1199,13 +1195,10 @@ html[dir=rtl] .social-link:last-of-type{
     display: none;
     transition: .3s;
 }
-.menu-bars:hover{
-    color: #292a5e;
-}
 @media (max-width: 1199px){
     .cat-drop{
         display: block;
-        margin-top: 10px;
+        margin-bottom: 10px;
         font-size: 14px;
         font-family: "TajawalMedium";
     }
@@ -1227,6 +1220,10 @@ html[dir=rtl] .social-link:last-of-type{
         color: #fff;
         margin-left: 10px;
         transition: all 0.3s ease-in-out
+    }
+    .menu-bars:hover{
+        color: #292a5e;
+        background-color: #dfeaf8;
     }
     html[dir=rtl] .menu-bars{
         margin-left: 0;
@@ -1281,41 +1278,37 @@ html[dir=rtl] .social-link:last-of-type{
     }
     .nav-header .big-menu {
         display: block;
-        margin-top: 32px;
         flex-direction: column;
-        padding: 0;
         text-align: left;
-        padding-left: 15px;
+        padding: 30px;
         align-items: baseline;      
+    }
+    .nav-header li{
+        margin-right:  0;
     }
     html[dir=rtl] .nav-header .big-menu{
         text-align: right;
-        padding-left: 0;
-        padding-right: 15px;
     }
     .cat-li {
-        margin-bottom: 17px;
-        padding: 0 18px;
+        margin-bottom: 20px;
     }
     .cat-li>.cat-anchor.active>i::before {
         content: "";
     }
     .chevron-down{
-        line-height: 0;
+        line-height: unset;
     }
-    .nav-header .chevron-down::after {
-        padding-left: 120px;
-    }
-    html[dir=rtl] .nav-header .chevron-down::after {
-        padding-left: 0;
-        padding-right: 120px;
+    .nav-header li .cat-anchor{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .big-menu .dropdown-content {
         background-color: transparent;
         text-align: left;
         min-width: 100%;
-        padding: 4px 15px 8px;
+        padding: 10px 15px;
         box-shadow: none;
     }
     html[dir=rtl] .big-menu .dropdown-content{
