@@ -186,7 +186,9 @@ $(document).ready(function() {
       ////////////////add owl carsoul to class feature////////////////////////////////
 
 	  if ( $(window).width() < 1199 ) {
-		$(".features .row").addClass("owl-carousel");
+		$('.features .col-md-3.col-xs-12').contents().unwrap();
+		$('.features .row').contents().unwrap();
+		$(".features .features-div").addClass("owl-carousel");
 		$('.features .owl-carousel').owlCarousel({
 			loop: true,
 			autoplay: true,
@@ -196,19 +198,19 @@ $(document).ready(function() {
 			responsiveClass: true,
 			responsive: {
 				0: {
-					items: 1,
+					items: 2,
 					nav: false,
 					dots: true,
 					loop: true
 				},
 				480: {
-					items: 1,
+					items: 2,
 					nav: false,
 					dots: true,
 					loop: true
 				},
 				720: {
-					items: 1,
+					items: 2,
 					nav: false,
 					dots: true,
 					loop: true
@@ -216,12 +218,12 @@ $(document).ready(function() {
 			}
 		});		
 	} else {
-		$(".features .row").removeClass("owl-Carousel");
+		$(".features .features-div").removeClass("owl-Carousel");
 	}
 
 	////////// remove row and col class from div//////////////////
 	if ( $(window).width() < 1199 ) {
-	$('.features .col-md-3.col-xs-12').contents().unwrap();
+	
 	}
 
 });
