@@ -143,7 +143,7 @@ $(document).ready(function() {
 
 		/////////add owl carsoul to class image-row/////////////////////
 
-	if ( $(window).width() < 920 ) {
+	if ( $(window).width() < 1199 ) {
 		$(".image-row").addClass("owl-carousel");
 		$('.image-grid .owl-carousel').owlCarousel({
 			loop: true,
@@ -154,6 +154,12 @@ $(document).ready(function() {
 			responsiveClass: true,
 			responsive: {
 				0: {
+					items: 1,
+					nav: false,
+					dots: true,
+					loop: true
+				},
+				270: {
 					items: 2,
 					nav: false,
 					dots: true,
@@ -179,7 +185,7 @@ $(document).ready(function() {
 
       ////////////////add owl carsoul to class feature////////////////////////////////
 
-	  if ( $(window).width() < 920 ) {
+	  if ( $(window).width() < 1199 ) {
 		$(".features .row").addClass("owl-carousel");
 		$('.features .owl-carousel').owlCarousel({
 			loop: true,

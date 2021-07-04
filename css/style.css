@@ -390,7 +390,7 @@ html[dir=rtl] .add-to .dropdown-content{
     box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1);
     border-radius: 5px;
     z-index: 5;
-    left: 50%;
+    left: 60%;
     transform: translateX(-50%);
     padding: 4px 0 8px;
     transition: all 0.3s ease-in-out;
@@ -660,6 +660,10 @@ html[dir=rtl] .image-row .image-sub:last-of-type{
     text-align: center;
     transition: all 0.3s ease-in-out;
 }
+.image-row .image-box img{
+    max-width: 100%;
+}
+/*test*/
 .image-row .image-text{
     font-size: 18px;
     font-family: "TajawalMedium";
@@ -1352,6 +1356,13 @@ html[dir=rtl] .social-link:last-of-type{
     .big-image{
         margin-bottom: 62px;
     }
+    /* .features a{
+        margin-left: 8px;
+    }
+    html[dir=rtl] .features a{
+        margin-left: 0;
+        margin-right: 8px;
+    } */
     .features-box{
         flex-direction: column;
         align-items: center;
@@ -1374,6 +1385,9 @@ html[dir=rtl] .social-link:last-of-type{
         bottom: 30px;
         transform: translateX(-50%);
         transition: all 0.4s ease-in-out;
+    }
+    html[dir=rtl].features .owl-carousel .owl-dots{
+
     }
     
     .features .owl-carousel button.owl-dot {
@@ -1444,7 +1458,6 @@ html[dir=rtl] .social-link:last-of-type{
     .image-grid .owl-carousel .owl-dots .owl-dot.active span {
         background-color: #292a5e;
     }
-    
 }    
 
 
@@ -1497,6 +1510,16 @@ html[dir=rtl] .social-link:last-of-type{
     }
     .search-box {
         width: 200px;
+    }
+    .image-row .image-box{
+        height: 150px;
+        width: 150px;
+    }
+}
+@media (max-width: 480px){
+    .image-row .image-box{
+        height: 125px;
+        width: 125px;
     }
 }
 
