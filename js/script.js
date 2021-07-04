@@ -147,7 +147,7 @@ $(document).ready(function() {
 		$(".image-row").addClass("owl-carousel");
 		$('.image-grid .owl-carousel').owlCarousel({
 			loop: true,
-			// autoplay: true,
+			autoplay: true,
 			autoplayTimeout: 4000,
 			margin: 10,
 			rtl: true,
