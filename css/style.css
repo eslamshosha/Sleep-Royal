@@ -29,30 +29,6 @@ body {
   ::-webkit-scrollbar-thumb:hover {
     background: #10758f; 
   }
-@font-face {
-    font-family: TajawalRegular;
-    src: url(../webfonts/Tajawal-Regular.ttf);
-}
-@font-face {
-    font-family: TajawalBlack;
-    src: url(../webfonts/Tajawal-Black.ttf);
-}
-@font-face {
-    font-family: TajawalMedium;
-    src: url(../webfonts/Tajawal-Medium.ttf);
-}
-@font-face {
-    font-family: TajawalBold;
-    src: url(../webfonts/Tajawal-Bold.ttf);
-}
-@font-face {
-    font-family: TajawalLight;
-    src: url(../webfonts/Tajawal-Light.ttf);
-}
-@font-face {
-    font-family: TajawalExtraBold;
-    src: url(../webfonts/Tajawal-ExtraBold.ttf);
-}
 
 .fixall{
     text-decoration: none;
@@ -455,6 +431,9 @@ html[dir=rtl] .lang-section .chevron-down::after{
 .lang-section .chevron-down:hover {
     color: #292a5e;
 }
+.big-menu .lang-section{
+    display: none;
+}
 
 /*                          header section                     */
 /*                          main section                       */
@@ -642,6 +621,7 @@ html[dir=rtl] .image-row .image-sub{
     text-align: center;
     margin-right: 30px;
     width: 100%;
+    display: inline-block;
 }
 html[dir=rtl] .image-row .image-sub:last-of-type{
     margin-left: 0;
@@ -852,6 +832,7 @@ html[dir=rtl] .price-box .last-price {
 .big-image img{
     width: 100%;
     min-height: 180px;
+    border-radius: 15px;
     object-fit: cover;
 }
 .main-slider .owl-carousel .owl-item img{
@@ -1321,6 +1302,17 @@ html[dir=rtl] .social-link:last-of-type{
     .lang-section{
         display: none;
     }
+    .big-menu .lang-section{
+        display: block;
+    }
+    .big-menu .lang-section img{
+        display: none;
+    }
+    .big-menu .lang-section .lang-word{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
     /*                    menu in phone size                      */
     .top-header .wish-to{
         display: none;
@@ -1526,6 +1518,9 @@ html[dir=rtl] .social-link:last-of-type{
     
     .img-logo img{
         max-width: 100%;
+    }
+    .item-img-box .item-span{
+        width: 60px;
     }
 
 }

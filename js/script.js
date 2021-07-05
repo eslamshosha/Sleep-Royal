@@ -33,13 +33,12 @@ $(document).ready(function() {
        });
 
 	   //dropdown inside menu
-	   $('.cat-li.dropdown .cat-anchor').click(function (e) {
+	   $('.cat-li.dropdown .cat-anchor, .lang-word').click(function (e) {
 		e.preventDefault()
 		var item =  $(this).siblings(".dropdown-content");
 		item.slideToggle(500);
 		
 		})
-		
    	}
 	
 	//Main Slider Carousel
